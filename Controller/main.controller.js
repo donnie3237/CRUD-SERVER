@@ -1,6 +1,6 @@
 //This file to make Controller process
 const { ObjectID , ObjectId} = require('bson');
-const users = require('../model/main.model.ts')
+const users = require('../model/main.model.js')
 
 exports.getdata =(req,res)=>{
     const User = users
