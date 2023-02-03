@@ -1,13 +1,14 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "*.ts",
-        "use": "@vercel/node",
-        "config": {
-          "runtime": "nodejs14",
-          "command": "ts-node index.ts"
+      {  "src": "*.ts", 
+      "use": "@vercel/node" 
+    }
+    ],
+    "routes": [
+        { 
+            "src": "/(.*)", 
+            "dest": "/index.ts" 
         }
-      }
     ]
-  }
+}
