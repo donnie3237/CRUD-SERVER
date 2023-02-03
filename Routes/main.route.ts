@@ -1,7 +1,7 @@
 import express from 'express';
 const Main_router : any = express.Router();
 const path = require('path');
-const controller = require('../Controller/main.controller.ts');
+const controller = require('../Controller/main.controller');
 
 Main_router.use(express.json());
 Main_router.use(express.urlencoded({ extended: true }));

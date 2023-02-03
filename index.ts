@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('./DB/db.ts')
+require('./DB/db')
 const express = require('express') 
 const app = express();
 const PORT:string | number | undefined = process.env.PORT;

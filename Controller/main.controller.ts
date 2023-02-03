@@ -1,7 +1,7 @@
 //This file to make Controller process
 import express from 'express';
 const { ObjectID , ObjectId} = require('bson');
-const users = require('../model/main.model.ts')
+const users = require('../model/main.model')
 
 exports.getdata =(req:express.Request,res:express.Response)=>{
     const User = users
