@@ -1,7 +1,7 @@
 import express from 'express';
 const Main_router : any = express.Router();
 const path = require('path');
-const controller = require('../Controller/main.controller.js');
+const controller = require('../Controller/main.controller.ts');
 type Action = {
     req: express.Request;
     res: express.Response;
