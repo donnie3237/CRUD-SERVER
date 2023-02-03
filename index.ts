@@ -3,7 +3,7 @@ require('./DB/db')
 const express = require('express') 
 const app = express();
 const PORT:string | number | undefined = process.env.PORT;
-const cors = require('cors')
+import cors from 'cors'
 const Main_router = require('./Routes/main.route');
 // use Router
 app.use("/",Main_router)
