@@ -2,9 +2,11 @@
   "name": "CRUD-SV",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec ts-node index.ts"
+    "start": "nodemon --exec ts-node index.ts",
+    "dev": "nodemon ./dist/index.js",
+    "build":"tsc --outDir dist"
   },
   "author": "",
   "license": "ISC",
