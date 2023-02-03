@@ -1,8 +1,8 @@
 require('dotenv').config();
-require('./DB/db.js')
+require('./DB/db.ts')
 const express = require('express') 
 const app = express();
-const PORT = process.env.PORT;
+const PORT:string | number | undefined = process.env.PORT;
 const cors = require('cors')
 const Main_router = require('./Routes/main.route');
 // use Router
