@@ -4,11 +4,6 @@
       {
         "src": "index.ts",
         "use": "@vercel/node",
-        "config": {
-          "env": {
-            "TS_NODE_PROJECT": "tsconfig.json"
-          }
-        }
       }
     ],
     "routes": [
