@@ -3,9 +3,7 @@
     "builds":[
         {
          "src": "index.ts",
-         "config": {
-           "lang": "typescript"
-         }
+         "use":"@vercel/node"
         }
     ],
     "routes": [
