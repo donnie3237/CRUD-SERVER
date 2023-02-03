@@ -10,11 +10,8 @@ type Action = {
 Main_router.use(express.json());
 Main_router.use(express.urlencoded({ extended: true }));
 
-Main_router.get("/", (req : Action,res : Action)=>{
-    res.res.sendFile(path.join(__dirname,'./server.html'))
-})
-Main_router.get('/code',(req : Action,res : Action)=>{
-    res.res.sendFile(path.join(__dirname,'../index.js'))
+Main_router.get('/',(req : Action,res : Action)=>{
+    controller.getdata(req,res);
 })
 Main_router.post('/add',(req : Action,res : Action)=>{
     controller.add(req,res);
