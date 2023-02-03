@@ -3,7 +3,6 @@
     "builds":[
         {
          "src": "index.ts",
-         "use":"@vercel/node-compiler",
          "config": {
            "lang": "typescript"
          }
