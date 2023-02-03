@@ -9,6 +9,9 @@ Main_router.use(express.urlencoded({ extended: true }));
 Main_router.get('/',(req :express.Request,res : express.Response)=>{
     controller.getdata(req,res);
 })
+Main_router.get('/test',(req :express.Request,res : express.Response)=>{
+    res.send("connected")
+})
 Main_router.post('/add',(req :express.Request,res : express.Response)=>{
     controller.add(req,res);
 })
