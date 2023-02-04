@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.ts",
+        "use": "@vercel/node-server",
+        "config": {
+          "distDir": "build"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/index.ts"
+      }
+    ]
+  }
+  
