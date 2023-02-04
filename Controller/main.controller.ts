@@ -43,9 +43,10 @@ exports.add = (req:express.Request,res:express.Response) => {
     new_user.save((err:any, result:any) => {
         if (err) {
             console.log(err);
+            res.send("error")
         } else {
             console.log(result)
-            res.send("hello")
+            res.send("success")
         }
     })
 };  
