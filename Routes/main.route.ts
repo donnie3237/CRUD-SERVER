@@ -7,7 +7,7 @@ import cors from 'cors';
 //add your routes
 
 //enable pre-flight
-Main_router.use(cors)
+Main_router.use(cors())
 Main_router.use(express.json());
 Main_router.use(express.urlencoded({ extended: true }));
 
