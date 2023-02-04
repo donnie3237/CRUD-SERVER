@@ -6,9 +6,16 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "nodemon --exec ts-node index.ts",
-    "build": "tsc",
-    "vercel":"tsc && node dist/index.js"
+    "build": "rimraf dist && tsc",
+    "ts.check":"tsc --project tsconfig.json",
+    "add-build":"git add dist",
+    "vercel": "tsc && node dist/index.js"
   },
+  "pre-commit":[
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -29,6 +36,8 @@
     "typescript": "^4.9.5"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.13"
+    "@types/cors": "^2.8.13",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^4.1.2"
   }
 }
