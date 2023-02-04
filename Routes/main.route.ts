@@ -2,7 +2,13 @@ import express from 'express';
 const Main_router : any = express.Router();
 const path = require('path');
 const controller = require('../Controller/main.controller');
+import cors from 'cors'
 
+Main_router.use(cors(
+    {
+        origin: 'https://dose-crud.netlify.app'
+    }
+))  
 Main_router.use(express.json());
 Main_router.use(express.urlencoded({ extended: true }));
 
