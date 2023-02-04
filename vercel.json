@@ -3,9 +3,9 @@
     "builds": [
       {
         "src": "index.ts",
-        "use": "npm",
+        "use": "pnpm",
         "config": {
-          "command": "npm run build"
+          "command": "pnpm i && pnpm run vercel"
         }
       }
     ],
