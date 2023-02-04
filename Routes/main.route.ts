@@ -4,11 +4,13 @@ const path = require('path');
 const controller = require('../Controller/main.controller');
 import cors from 'cors'
 
-Main_router.use(cors(
-    {
-        origin: 'https://dose-crud.netlify.app'
-    }
-))  
+
+Main_router.use(cors())  
+Main_router.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
 Main_router.use(express.json());
 Main_router.use(express.urlencoded({ extended: true }));
 
