@@ -6,6 +6,11 @@ const PORT:string | number | undefined = process.env.PORT;
 import cors from 'cors'
 const Main_router = require('./Routes/main.route');
 
+declare module 'express' {
+    interface Response {
+        header(name: string, value: string): Response;
+    }
+}
 
 // middle ware
 app.use(express.json())
