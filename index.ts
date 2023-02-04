@@ -9,7 +9,12 @@ const Main_router = require('./Routes/main.route');
 // middle ware
 app.use(express.json())
 
-app.use(cors);
+app.use(cors(
+    {
+        origin:'*',
+        credentials: true,
+    }
+));
 app.use(express.urlencoded({ extended : true}))
 
 //listan port
