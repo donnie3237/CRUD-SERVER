@@ -2,11 +2,8 @@
     "version": 2,
     "builds": [
       {
-        "src": "server.ts",
-        "use": "@vercel/node-server",
-        "config": {
-          "distDir": "build"
-        }
+        "src": "dist/index.js",
+        "use": "@vercel/node-server"
       }
     ],
     "routes": [
@@ -14,6 +11,7 @@
         "src": "/api/(.*)",
         "dest": "/api/index.ts"
       }
-    ]
-  }
+    ],
+    "command": "npm run build"
+}
   
