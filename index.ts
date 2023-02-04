@@ -8,12 +8,8 @@ const Main_router = require('./Routes/main.route');
 
 // middle ware
 app.use(express.json())
-app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    next();
-});
-app.use(cors());
+
+app.use(cors);
 app.use(express.urlencoded({ extended : true}))
 
 //listan port

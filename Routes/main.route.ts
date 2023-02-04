@@ -1,11 +1,13 @@
 import express from 'express';
-const Main_router : any = express.Router();
+var Main_router : any = express.Router();
 const path = require('path');
 const controller = require('../Controller/main.controller');
-import cors from 'cors'
+import cors from 'cors';
 
+//add your routes
 
-Main_router.use(cors())  
+//enable pre-flight
+Main_router.use(cors)
 Main_router.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
