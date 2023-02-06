@@ -11,8 +11,7 @@ app.use(express.json())
 
 app.use(cors(
     {
-        origin:'*',
-        credentials: true,
+        origin:['http://localhost:33331', 'https://dose-crud.netlify.app/']
     }
 ));
 app.use(express.urlencoded({ extended : true}))

@@ -7,7 +7,11 @@ import cors from 'cors';
 //add your routes
 
 //enable pre-flight
-Main_router.use(cors())
+Main_router.use(cors(
+    {
+        origin:['http://localhost:33331', 'https://dose-crud.netlify.app/']
+    }
+))
 Main_router.use(express.json());
 Main_router.use(express.urlencoded({ extended: true }));
 
