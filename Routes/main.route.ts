@@ -9,7 +9,7 @@ import cors from 'cors';
 //enable pre-flight
 Main_router.use(cors(
     {
-        origin:['http://localhost:33331', 'https://dose-crud.netlify.app/']
+        origin:['http://localhost:33331', 'https://dose-crud.netlify.app/','https://tauri.localhost/#/']
     }
 ))
 Main_router.use(express.json());
