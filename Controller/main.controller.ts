@@ -22,8 +22,9 @@ exports.getOne =(req:express.Request,res:express.Response)=>{
 exports.delete = (req:express.Request,res:express.Response)=>{
     const User = users
     User.deleteOne({_id : ObjectId(req.params['id'])}, function (err:any) {
-        if(err){console.log("error")}
-        console.log("finished")
+        if(err){console.log("error")}else{
+            res.send("deleted")
+        }
       });
 }
 
