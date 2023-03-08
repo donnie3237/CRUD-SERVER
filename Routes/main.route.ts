@@ -3,6 +3,7 @@ var Main_router : any = express.Router();
 const path = require('path');
 const controller = require('../Controller/main.controller');
 import cors from 'cors';
+const version = require('../Controller/version.controller')
 
 //add your routes
 
@@ -32,6 +33,9 @@ Main_router.delete('/delete/:id',(req :express.Request,res : express.Response)=>
 })
 Main_router.put('/update/:id',(req :express.Request,res : express.Response)=>{
     controller.update(req,res);
+})
+Main_router.get('/version',(req :express.Request,res : express.Response)=>{
+    version.getVersion(req,res);
 })
 
 module.exports = Main_router ;
